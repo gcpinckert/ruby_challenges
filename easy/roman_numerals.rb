@@ -37,71 +37,42 @@ Initialize Conversions Constant:
 
 RomanNumeral::new(integer)
 - assign the integer passed as argument to an instance variable
-- generate an array of place values, i.e. if 1999 -> [1000, 900, 90, 9]
-
-RomanNumeral#place_values
-- get an array of all the digits in the passed in number
-  - note that if we use Integer#digits this will come out in reverse
-- iterate over the array, with index, for transformation
-  - convert the current int to a string
-  - concatenate the string '0' multiplied by the current index with the result
-  - convert the resulting string back into an integer
-- get rid of any zeros in the resulting transformed array (i.e. 000 not 100)
-- reverse it and return the result
 
 RomanNumeral#to_roman
-- Iterate over the array of place values, transforming
-  - if the conversions hash has the key of the current num
-    - replace it with the associated value
-  - otherwise
-    - initialize an empty string
-    - find the key for the next lowest decimal num (i.e. if 3, it will be 1)
-    - add the associated value to the string
-    - subtract the key from the num
-    - keep looping through the above steps until num = 0
-- join the transformed array into a string and return
+- Initialize empty string to hold results
+- Get a copy of num to work with (so we don't lose the value?)
+- Iterate through the conversions hash
+  - Loop:
+    - Is the current key less or = to num?
+      - Add the associated value to the results string
+      - Subtract the key from num
+      - Break if the current key > num
+  - return string if num = 0
+- return the results string
 =end
 
 class RomanNumeral
-  CONVERSIONS = { 1 => 'I', 4 => 'IV', 5 => 'V', 9 => 'IX', 10 => 'X',
-                  40 => 'XL', 50 => 'L', 90 => 'XC', 100 => 'C',
-                  400 => 'CD', 500 => 'D', 900 => 'CM', 1000 => 'M' }
-
-  attr_reader :number, :digits
+  CONVERSIONS = { 1000=>"M", 900=>"CM", 500=>"D", 400=>"CD", 100=>"C",
+                  90=>"XC", 50=>"L", 40=>"XL", 10=>"X", 9=>"IX", 5=>"V",
+                  4=>"IV", 1=>"I" }
 
   def initialize(num)
     @number = num
-    @digits = place_values
-  end
-
-  def place_values
-    arr = number.digits.map.with_index { |n, i| (n.to_s + ('0' * i)).to_i }
-    arr.delete(0)
-    arr.reverse
   end
 
   def to_roman
-    digits.map do |num|
-      if CONVERSIONS.has_key?(num)
-        CONVERSIONS[num]
-      else
-        calc_roman_num(num)
+    roman_numeral = ''
+    num = @number.dup
+
+    CONVERSIONS.each do |decimal, letters|
+      loop do
+        break if decimal > num
+        roman_numeral << letters
+        num -= decimal
       end
-    end.join
-  end
-
-  def calc_roman_num(num)
-    str = ''
-    key = CONVERSIONS.keys.select { |int| int < num }.max
-
-    loop do
-      str << CONVERSIONS[key]
-      num -= key
-      break if num == 0
+      return roman_numeral if num == 0
     end
 
-    str
+    roman_numeral
   end
 end
-
-# Note: This currently takes too long to test. Rework the algo.
