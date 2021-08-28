@@ -10,3 +10,4 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
   - *note: further exploration/additional challenge required
 - [Anagrams](./easy/anagrams.rb) and [Tests](./easy/anagrams_tests.rb)
   - *note: revisit for refactoring, could be more efficient
+- [Scrabble Score](./easy/scrabble_score.rb) and [Tests](./easy/scrabble_score_test.rb)
