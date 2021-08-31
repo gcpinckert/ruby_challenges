@@ -2,6 +2,12 @@
 
 A collection of solutions for the Launch School Ruby Challenges Exercises.
 
+## To-Do
+
+- [ ] Complete first run through of exercises
+- [ ] Refactoring of exercises
+- [ ] Further exploration for noted exercises
+
 ## Easy
 
 - [Triangle Class](./easy/triangles.rb) and [Tests](./easy/triangle_tests.rb)
@@ -12,3 +18,4 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
   - *note: revisit for refactoring, could be more efficient
 - [Scrabble Score](./easy/scrabble_score.rb) and [Tests](./easy/scrabble_score_test.rb)
 - [Perfect Numbers](./easy/perfect_number.rb) and [Tests](./easy/perfect_number_tests.rb)
+- [Octal](./easy/octal.rb) and [Tests](./easy/octal_test.rb)
