@@ -22,3 +22,4 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 - [Octal](./easy/octal.rb) and [Tests](./easy/octal_test.rb)
 - [Sum of Multiples](./easy/sum_of_multiples.rb) and [Tests](./easy/sum_of_multiples_test.rb)
   - *note: revisit for refactoring could be more efficient
+- [Beer Song](./easy/beer_song.rb) and [Tests](./easy/beer_song_test.rb)
