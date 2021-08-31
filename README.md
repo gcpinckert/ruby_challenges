@@ -4,8 +4,9 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 
 ## To-Do
 
-- [ ] Complete first run through of exercises
-- [ ] Refactoring of exercises
+- [ ] Complete first run through of all exercises
+- [ ] Refactoring of all exercises
+- [ ] Rubocop of exercises
 - [ ] Further exploration for noted exercises
 
 ## Easy
@@ -19,3 +20,5 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 - [Scrabble Score](./easy/scrabble_score.rb) and [Tests](./easy/scrabble_score_test.rb)
 - [Perfect Numbers](./easy/perfect_number.rb) and [Tests](./easy/perfect_number_tests.rb)
 - [Octal](./easy/octal.rb) and [Tests](./easy/octal_test.rb)
+- [Sum of Multiples](./easy/sum_of_multiples.rb) and [Tests](./easy/sum_of_multiples_test.rb)
+  - *note: revisit for refactoring could be more efficient
