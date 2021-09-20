@@ -31,7 +31,7 @@ DATA STRUCTURES:
 Input: a string of digits and an integer representing "slice" length
 Output: a nested array, each subarray has the elements that are digits in the slice
   - subarray represents digits as integers not strings
-Interally: an array to iterate over digits
+Internally: an array to iterate over digits
 
 ALGORITHM:
 Series#initialize

@@ -24,3 +24,8 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
   - *note: revisit for refactoring could be more efficient
 - [Beer Song](./easy/beer_song.rb) and [Tests](./easy/beer_song_test.rb)
 - [Series](./easy/series.rb) and [Tests](./easy/series_test.rb)
+
+## Medium
+
+- [Diamond](./medium/diamond.rb) and [Tests](./medium/diamond_tests.rb)
+- [Robot Name](./medium/robot_name.rb) and [Tests](./medium/robot_name_tests.rb)
