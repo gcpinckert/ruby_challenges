@@ -29,3 +29,4 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 
 - [Diamond](./medium/diamond.rb) and [Tests](./medium/diamond_tests.rb)
 - [Robot Name](./medium/robot_name.rb) and [Tests](./medium/robot_tests.rb)
+- [Clock](./medium/clock.rb) and [Tests](./medium/clock_tests.rb)
