@@ -33,3 +33,4 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 - [Meetup](./medium/meetup.rb) and [Tests](./medium/meetup_test.rb)
 - [Simple Linked List](./medium/simple_linked_list.rb), [PEDAC](./medium/simple_linked_list_PEDAC.rb), and [Tests](./medium/linked_list_test.rb)
   - *note: refactor so that LinkedList class does not rely on Array
+- [Custom Set](./medium/custom_set.rb), [PEDAC](./medium/custom_set_PEDAC.rb), and [Tests](./medium/custom_set_test.rb)
