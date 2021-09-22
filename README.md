@@ -31,3 +31,5 @@ A collection of solutions for the Launch School Ruby Challenges Exercises.
 - [Robot Name](./medium/robot_name.rb) and [Tests](./medium/robot_tests.rb)
 - [Clock](./medium/clock.rb) and [Tests](./medium/clock_tests.rb)
 - [Meetup](./medium/meetup.rb) and [Tests](./medium/meetup_test.rb)
+- [Simple Linked List](./medium/simple_linked_list.rb), [PEDAC](./medium/simple_linked_list_PEDAC.rb), and [Tests](./medium/linked_list_test.rb)
+  - *note: refactor so that LinkedList class does not rely on Array
