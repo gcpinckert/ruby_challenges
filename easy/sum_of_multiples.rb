@@ -1,7 +1,7 @@
 =begin
 PROBLEM:
 Find the sum of all the multiples of numbers in a given set that are less
-than another given number. 
+than another given number.
 -> two arguments, max_num and set_of_nums
 -> Find all the multiples in set_of_nums that are less than max_num
 -> Sum the multiples
@@ -17,7 +17,7 @@ Define a class SumOfMultiples
   - Takes a single argument, the max_num
   - Uses default set of [3, 5] to calculate sum of multiples
 - #initialize method
-  - Takes an arbitrary amount of arguments, representing numbers in the set_of_nums
+  - Takes arbitrary amount of arguments, representing numbers in the set_of_nums
 - Instance method #to
   - Takes a single argument, the max num
   - Uses the set of nums defined in the calling instance to calculate sum of
@@ -63,20 +63,18 @@ class SumOfMultiples
   end
 
   def to(max_num)
-    set.each do |num|
-      counter = 1
-      loop do
-        current_multiple = num * counter
-        break if current_multiple >= max_num
-        multiples << current_multiple
-        counter += 1
-      end
-    end
-
-    multiples.uniq.sum
+    (1...max_num).select do |num|
+      multiple_of_set?(num)
+    end.sum
   end
 
   def self.to(max_num)
     SumOfMultiples.new.to(max_num)
+  end
+
+  private
+
+  def multiple_of_set?(possible_multiple)
+    @set.any? { |set_num| possible_multiple % set_num == 0 }
   end
 end

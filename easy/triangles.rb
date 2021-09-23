@@ -3,7 +3,7 @@ PROBLEM:
 - Write a program to see if a triangle is equilateral, isosceles, or scalene
 - Triangle:
   - all sides must have length that is > 0
-  - sum of the lengths of any two sides are greater than the length of third side
+  - sum of lengths of any two sides are greater than the length of third side
 - Equilateral
   - all three sides are equal
 - Isosceles
@@ -17,7 +17,7 @@ EXAMPLES/TEST CASES:
   - Can accept either integers or floats
   - Passing a 0 should raise an argument error
   - Passing a negative num should raise an argument error
-  - Passing arguments that do not adhere to the 2nd rule of triangles raises error
+  - Passing arguments not adhering to the 2nd rule of triangles raises error
 - Triangle#kind method
   - Returns a string representing the type of triangle
   - i.e. 'isosceles', 'equilateral', 'scalene'
@@ -63,7 +63,7 @@ class Triangle
   end
 
   private
-  
+
   def valid_triangle?
     positive_sides? && valid_lengths?
   end
@@ -74,7 +74,7 @@ class Triangle
 
   def valid_lengths?
     @sides[0] + @sides[1] > @sides[2] &&
-    @sides[1] + @sides[2] > @sides[0] &&
-    @sides[2] + @sides[0] > @sides[1]
+      @sides[1] + @sides[2] > @sides[0] &&
+      @sides[2] + @sides[0] > @sides[1]
   end
 end

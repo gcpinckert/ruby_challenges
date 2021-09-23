@@ -19,7 +19,6 @@ Create a class Octal
 - Initialization takes one argument, a string of digits representing octal num
 - Can accept invalid strings (not all digits), does not raise error
 
-
 Octal#to_decimal
 - Returns an integer representing the number passed as argument in base 10
 - If the string argument was not a valid octal number, returns 0

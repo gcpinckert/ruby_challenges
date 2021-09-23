@@ -8,11 +8,11 @@ Anagram = word that has all the letters, rearranged, as another word
 Create an Anagram class
 - Anagram::new -> takes one argument a string representing word to match
 - Anagram#match -> takes one argument, an array of strings
-  - returns an array of all strings that are anagrams of word to match from ::new
+  - returns array of all strings that are anagrams of word to match from ::new
   - anagrams are not case sensitive
   - the same number of each letter must be present in each word
     (i.e. galea is not an anagram of eagle one has two a's the other two e's)
-  - words that are the same are not anagrams (i.e. corn is not an anagram of corn)
+  - same words are not anagrams (i.e. corn is not an anagram of corn)
   - a substring is not an anagram
   - if 0 anagrams are found, return an empty array
 
@@ -65,10 +65,12 @@ class Anagram
     anagrams
   end
 
+  private
+
   def anagram?(possible_anagram)
     return false if word == possible_anagram
     all_letters_match?(word, possible_anagram) &&
-    all_letters_match?(possible_anagram, word)
+      all_letters_match?(possible_anagram, word)
   end
 
   def all_letters_match?(word1, word2)

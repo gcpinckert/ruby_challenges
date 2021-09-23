@@ -4,7 +4,7 @@ Write a program that can generate the lyrics of the 99 Bottles of Beer song.
 
 EXAMPLES / TEST CASES:
 Define a BeerSong class
-Expected lyric structure: 
+Expected lyric structure:
   "99 bottles of beer on the wall, 99 bottles of beer.\n" \
   "Take one down and pass it around, 98 bottles of beer on the wall.\n"
 -> Each line of verse ends with a newline
@@ -23,7 +23,7 @@ a class method ::verse
   Go to the store and buy some more, 99 bottles of beer on the wall.
 
 a class method ::verses
--> takes two arguments, integers representing the first verse and last verse in a
+-> takes two arguments, integers representing the first verse and last verse in
    range of verses to return
 -> returns all the verses in the range provided
 -> see above for differences in verses 1 and 0
@@ -49,10 +49,10 @@ BeerSong::Verse
 - Initialize a bottles variable to the number provided as an argument
 - If the bottles > 2
   return *bottles* bottles of beer on the wall, *bottles* bottles of beer.\n +
-         Take one down, pass it around, *bottles - 1* bottles of beer on the wall.\n
+    Take one down, pass it around, *bottles - 1* bottles of beer on the wall.\n
 - If bottles == 2
   return *bottles* bottles of beer on the wall, *bottles* bottles of beer.\n +
-         Take one down, pass it around, *bottles - 1* bottle of beer on the wall.\n
+      Take one down, pass it around, *bottles - 1* bottle of beer on the wall.\n
 - If bottles == 1
   return *bottles* bottles of beer on the wall, *bottles* bottles of beer.\n +
          Take one down, pass it around, no more bottles of beer on the wall.\n
@@ -66,7 +66,8 @@ BeerSong::Verses
 - Track the verse number
   - Add the value returned by BeerSong::verse for the current verse number to
     the results array
-- Join the results array into a string with a newline delimiter and return the result
+- Join the results array into a string with a newline delimiter and return the
+  result
 
 BeerSong::lyrics
 - Return the value for BeerSong::verses when given 99 and 0 as arguments
@@ -99,12 +100,14 @@ class BeerSong
 
     def regular_verse(verse)
       "#{verse} bottles of beer on the wall, #{verse} bottles of beer.\n" \
-      "Take one down and pass it around, #{verse - 1} bottles of beer on the wall.\n"
+      "Take one down and pass it around, " \
+      "#{verse - 1} bottles of beer on the wall.\n"
     end
 
     def two_one_verse(verse)
       "#{verse} bottles of beer on the wall, #{verse} bottles of beer.\n" \
-      "Take one down and pass it around, #{verse - 1} bottle of beer on the wall.\n"
+      "Take one down and pass it around, " \
+      "#{verse - 1} bottle of beer on the wall.\n"
     end
 
     def penultimate_verse(verse)

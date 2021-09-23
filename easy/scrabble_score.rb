@@ -25,7 +25,7 @@ e * 1 -> 1 * 1 = 1
 Create a Scrabble class
 - New instance should initialize with a single string argument
 
-Define a method Scrabble#score that returns an integer representing the score for
+Define a method Scrabble#score that returns an integer representing the score of
 the string passed in during instantiation
 - An empty string should score 0
 - A string containing only whitespace should score 0

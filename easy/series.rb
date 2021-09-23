@@ -29,7 +29,7 @@ Series#slices
 
 DATA STRUCTURES:
 Input: a string of digits and an integer representing "slice" length
-Output: a nested array, each subarray has the elements that are digits in the slice
+Output: nested array, each subarray has elements that are digits in the slice
   - subarray represents digits as integers not strings
 Internally: an array to iterate over digits
 
@@ -65,6 +65,6 @@ class Series
   attr_reader :digits, :max_size
 
   def convert_digits(string)
-    string.chars.map { |char| char.to_i }
+    string.chars.map(&:to_i)
   end
 end

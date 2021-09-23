@@ -18,7 +18,7 @@ EXAMPLES AND TEST CASES:
 
 Define a PerfectNumber class
 Define a PerfectNumber::classify method that takes a single argument
-If the argument passed is not a positive integer, it should raise a StandardError
+If argument passed is not a positive integer, it should raise a StandardError
 PerfectNumber::classify returns a string representing the type of number
 
 DATA STRUCTURES:
